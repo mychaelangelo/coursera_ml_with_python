@@ -1,6 +1,6 @@
 # Machine Learning with Python Lab Work
 
-This repo contains my lab work for the "Machine Learning with Python" course offered by Coursera in collaboration with IBM. It's part of a personal learning challenge called **100 Days of AI**. This involves learning about AI every day for 100 days. 
+This repo contains my lab work for the ["Machine Learning with Python"](https://www.coursera.org/learn/machine-learning-with-python) course offered by Coursera in collaboration with IBM. It's part of a personal learning challenge called **100 Days of AI**. This involves learning about AI every day for 100 days. 
 
 ## Disclaimer
 
@@ -28,6 +28,6 @@ Feel free to dive into the code and experiment with different approaches. Howeve
 
 ## Connect with Me
 
-If you have any questions, suggestions, or just want to connect, feel free to reach out to me. You can find me on [LinkedIn](https://www.linkedin.com/in/yourname/) or [Twitter](https://www.linkedin.com/in/michaeltefula/).
+If you have any questions, suggestions, or just want to connect, feel free to reach out to me. You can find me on [LinkedIn](https://www.linkedin.com/in/michaeltefula/) or [Twitter](https://twitter.com/michaeltefula).
 
 Happy learning!
