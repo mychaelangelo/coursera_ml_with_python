@@ -13,8 +13,8 @@ import itertools
 
 cell_df = pd.read_csv("cell_samples.csv")
 
-# visualize the data
-""" malignant_data = cell_df[cell_df['Class']==4][0:50] # get 50 rows of malignant data (i.e. where class = 4)
+""" # visualize the data
+malignant_data = cell_df[cell_df['Class']==4][0:50] # get 50 rows of malignant data (i.e. where class = 4)
 benign_data = cell_df[cell_df['Class']==2][0:50] # get 50 rows of benign data (i.e. where class = 2)
 
 ax = malignant_data.plot( # plot the malignant cells
@@ -33,7 +33,7 @@ benign_data.plot( # plot the benign cells
     label='benign',
     ax=ax
 )
-plt.show() """
+plt.show()  """
 
 ### PRE-PROCESS THE DATA
 
@@ -46,7 +46,12 @@ cell_df['BareNuc'] = cell_df['BareNuc'].astype('int')
 
 ### SELECT FEATURES
 
-feature_df = cell_df[['Clump', 'UnifSize', 'UnifShape', 'MargAdh', 'SingEpiSize', 'BareNuc', 'BlandChrom', 'NormNucl', 'Mit']]
+feature_df = cell_df[
+    [
+        'Clump', 'UnifSize', 'UnifShape', 'MargAdh', 'SingEpiSize', 
+         'BareNuc', 'BlandChrom', 'NormNucl', 'Mit'
+     ]
+]
 X = np.asarray(feature_df)
 
 y = np.asanyarray(cell_df['Class'])
