@@ -33,6 +33,7 @@ df_sydney_processed = df_sydney_processed.astype(float)
 # create new df to separate features from the target var, raintomorrw
 features = df_sydney_processed.drop(columns='RainTomorrow', axis=1) 
 
+
 # create series object of the target variable (the labels data) and assign to Y 
 Y = df_sydney_processed['RainTomorrow']
 
