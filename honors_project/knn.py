@@ -2,8 +2,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, jaccard_score
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, jaccard_score, ConfusionMatrixDisplay
 from sklearn.metrics import classification_report
+import matplotlib.pyplot as plt
 
 # MISC
 pd.set_option('future.no_silent_downcasting', True)
@@ -53,6 +54,23 @@ print(classification_report(y_test, y_predictions))
 conf_matrix = confusion_matrix(y_test, y_predictions)
 print("Confusion Matrix:\n", conf_matrix)
 
+# Visualize confusion matrix
+cm_display = ConfusionMatrixDisplay(
+    confusion_matrix=conf_matrix, 
+    display_labels=["No Rain", "Rain"]
+)
+
+fig, ax = plt.subplots(figsize=(8, 6))
+cm_display.plot(ax=ax)
+
+ax.set_title('Confusion Matrix', pad=20)
+ax.xaxis.set_label_position('top') 
+ax.set_xlabel('Predicted Values', labelpad=10)
+ax.set_ylabel('Actual Values', labelpad=10)
+plt.tight_layout()
+plt.show()
+
+
 
 """ # Cross-validate to find the best 'k'
 from sklearn.model_selection import cross_val_score
@@ -66,3 +84,4 @@ for k in range(1, 20):
         best_k = k
 
 print(f"Best K: {best_k} with cross-validated accuracy of {best_score}") """
+
