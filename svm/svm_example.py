@@ -72,7 +72,7 @@ yhat = clf.predict(X_test)
 ### EVALS
 
 # Compute confusion matrix
-cm = confusion_matrix(y_test, yhat, labels=[4, 2])
+cm = confusion_matrix(y_test, yhat, labels=[0, 1])
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Malignant','Benign'])
 
 # Plot the confusion matrix
